@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private Transform buttonsArea;
     [SerializeField] private SkipButton skipBox;
+    [SerializeField] private GameDataManager dataManager;
 
     [Header("Prefabs")]
     [SerializeField] private GameObject buttonPrefab;
@@ -157,7 +158,7 @@ public class GameController : MonoBehaviour
             player.time = time;
         }
     }
-    public void Save()
+    private string SaveCurrentProgress()
     {
         Stack<GameNode> stack = new Stack<GameNode>();
         stack.Push(startNode);
@@ -175,9 +176,9 @@ public class GameController : MonoBehaviour
             }
         }
         Debug.Log(progress);
-        // return progress;
+        return progress;
     }
-    public void Load(string save)
+    private void LoadData(string save)
     {
         Stack<GameNode> stack = new Stack<GameNode>();
         stack.Push(startNode);
@@ -198,8 +199,19 @@ public class GameController : MonoBehaviour
             }
             ++index;
         }
-        startNode = lastNode;
-        onPlayingEnded?.Invoke();
-        // return lastNode;
+        currentNode = lastNode;
+        InitPlayer();
+
+    }
+    public void Load()
+    {
+        var data = dataManager.GetDocument(SaveName.SAVE1);
+        LoadData(data);
+    }
+    public void Save()
+    {
+        var progress = SaveCurrentProgress();
+        dataManager.SaveDocument(SaveName.SAVE1, progress);
+        Debug.Log(progress);
     }
 }
