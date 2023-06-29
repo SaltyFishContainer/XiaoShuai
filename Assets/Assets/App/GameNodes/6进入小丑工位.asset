@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e53f64f22a21524e98e767cb7e15049, type: 3}
   m_Name: "6\u8FDB\u5165\u5C0F\u4E11\u5DE5\u4F4D"
   m_EditorClassIdentifier: 
+  angle: -90
+  connectionSize: {x: 1, y: 1}
   clip: {fileID: 32900000, guid: 8d93eb6fe59855349a43c7a4ceab8900, type: 3}
   description: "\u8FDB\u5165\u5C0F\u4E11\u5DE5\u4F4D"
   options:
@@ -19,3 +21,5 @@ MonoBehaviour:
     node: {fileID: 11400000, guid: 94012fc0458d8dc43b01041c688b0e2a, type: 2}
   - buttonTittle: "\u9500\u6BC1"
     node: {fileID: 11400000, guid: c40c2aee981700b4abcd8a617c5d895b, type: 2}
+  isEnded: 0
+  isReached: 0

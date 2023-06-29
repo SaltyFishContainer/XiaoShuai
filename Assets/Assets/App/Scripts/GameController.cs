@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Slider slider;
     [SerializeField] private Transform buttonsArea;
+    [SerializeField] private SkipButton skipBox;
 
     [Header("Prefabs")]
     [SerializeField] private GameObject buttonPrefab;
@@ -41,6 +42,7 @@ public class GameController : MonoBehaviour
                 return;
             }
             previousNodes.Push(currentNode);
+            currentNode.isReached = true;
             foreach (var option in currentNode.options)
             {
                 if (Instantiate(buttonPrefab, buttonsArea).TryGetComponent<Button>(out var button))
@@ -57,10 +59,13 @@ public class GameController : MonoBehaviour
             }
         };
     }
-
     private void Awake()
     {
         currentNode = startNode;
+        if (skipBox != null)
+        {
+            skipBox.gameObject.SetActive(false);
+        }
         if (player != null)
         {
             player.loopPointReached += _ => playingEnded?.Invoke();
@@ -90,17 +95,33 @@ public class GameController : MonoBehaviour
             slider.value = (float)progress;
         }
     }
-
     public void StartPlay()
     {
         InitPlayer();
     }
-
     public void Skip()
     {
-        player.time = player.clip.length - 1;
-    }
+        skipBox.gameObject.SetActive(true);
+        player.Pause();
+        skipBox.doSkip = () =>
+        {
+            skipBox.doSkip = null;
+            skipBox.cancelSkip = null;
+            player.time = player.clip.length - .5f;
+            skipBox.gameObject.SetActive(false);
+            player.Play();
+            Debug.Log("Do skip");
+        };
+        skipBox.cancelSkip = () =>
+        {
+            skipBox.doSkip = null;
+            skipBox.cancelSkip = null;
+            skipBox.gameObject.SetActive(false);
+            Debug.Log("Cancel skip");
 
+            player.Play();
+        };
+    }
     public void Back()
     {
         if (previousNodes.TryPop(out var previous))
@@ -110,13 +131,68 @@ public class GameController : MonoBehaviour
         }
 
     }
-
-    public void onSliderValueChange(float value)
+    public void SwitchPause()
+    {
+        if (player.isPaused)
+        {
+            player.Play();
+        }
+        else
+        {
+            player.Pause();
+        }
+    }
+    public void OnSliderValueChange(float value)
     {
         if (sliderPointerState)
         {
             var time = player.clip.length * value;
             player.time = time;
         }
+    }
+    public void Save()
+    {
+        Stack<GameNode> stack = new Stack<GameNode>();
+        stack.Push(startNode);
+        string progress = "";
+        while (stack.Count != 0)
+        {
+            var current = stack.Pop();
+            if (current.clip != player.clip)
+                progress += (current.isReached ? 1 : 0);
+            else
+                progress += 2;
+            foreach (var option in current.options)
+            {
+                stack.Push(option.node);
+            }
+        }
+        Debug.Log(progress);
+        // return progress;
+    }
+
+    public void Load(string save)
+    {
+        Stack<GameNode> stack = new Stack<GameNode>();
+        stack.Push(startNode);
+        int index = 0;
+        GameNode lastNode = startNode;
+        while (stack.Count != 0)
+        {
+            var current = stack.Pop();
+            char state = save[index];
+            current.isReached = state != '0';
+            if (state == '2')
+            {
+                lastNode = current;
+            }
+            foreach (var option in current.options)
+            {
+                stack.Push(option.node);
+            }
+            ++index;
+        }
+        startNode = lastNode;
+        // return lastNode;
     }
 }

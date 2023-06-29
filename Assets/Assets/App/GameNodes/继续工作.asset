@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e53f64f22a21524e98e767cb7e15049, type: 3}
   m_Name: "\u7EE7\u7EED\u5DE5\u4F5C"
   m_EditorClassIdentifier: 
+  angle: -90
+  connectionSize: {x: 1, y: 1}
   clip: {fileID: 32900000, guid: 8297dc8397e4ef844ae757f933a37315, type: 3}
   description: "\u7EE7\u7EED\u5DE5\u4F5C"
   options:
   - buttonTittle: "\u7EE7\u7EED"
     node: {fileID: 11400000, guid: cfdac399831836246925a1989c1832ea, type: 2}
   isEnded: 0
+  isReached: 0

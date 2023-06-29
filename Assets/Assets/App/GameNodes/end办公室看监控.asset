@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e53f64f22a21524e98e767cb7e15049, type: 3}
   m_Name: "end\u529E\u516C\u5BA4\u770B\u76D1\u63A7"
   m_EditorClassIdentifier: 
+  angle: -90
+  connectionSize: {x: 1, y: 1}
   clip: {fileID: 32900000, guid: 1c87db9f8f3be7349ad2b7d34090f8c1, type: 3}
   description: "\u529E\u516C\u5BA4\u770B\u76D1\u63A7"
   options: []
   isEnded: 1
+  isReached: 0
