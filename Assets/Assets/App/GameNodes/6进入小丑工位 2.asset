@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e53f64f22a21524e98e767cb7e15049, type: 3}
+  m_Name: "6\u8FDB\u5165\u5C0F\u4E11\u5DE5\u4F4D 2"
+  m_EditorClassIdentifier: 
+  clip: {fileID: 32900000, guid: 8d93eb6fe59855349a43c7a4ceab8900, type: 3}
+  description: "\u8FDB\u5165\u5C0F\u4E11\u5DE5\u4F4D"
+  options:
+  - buttonTittle: "\u7EE7\u7EED"
+    node: {fileID: 11400000, guid: 3dd091397b852e443baa82a83c832ddc, type: 2}
+  isEnded: 0
