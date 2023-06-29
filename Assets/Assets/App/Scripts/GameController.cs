@@ -48,6 +48,7 @@ public class GameController : MonoBehaviour
             }
             previousNodes.Push(currentNode);
             currentNode.isReached = true;
+            buttonsArea.DestroyAllChildren();
             onPlayingEnded?.Invoke();
             foreach (var option in currentNode.options)
             {
