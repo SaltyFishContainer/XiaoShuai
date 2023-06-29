@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e53f64f22a21524e98e767cb7e15049, type: 3}
-  m_Name: "end\u5220\u8DD1\u8DEF 1"
+  m_Name: "end\u6444\u50CF\u5934\u6CA1\u6709\u574F"
   m_EditorClassIdentifier: 
-  angle: -45
-  connectionSize: {x: 1, y: 1}
-  clip: {fileID: 32900000, guid: 466faeadad3a29d46b9f61384eedc577, type: 3}
-  description: "\u5220\u8DD1\u8DEF"
+  angle: -90
+  connectionSize: {x: 2, y: 1}
+  clip: {fileID: 32900000, guid: d5da3dfb725f34f40b37ff8a356bffd7, type: 3}
+  description: "end\u6444\u50CF\u5934\u6CA1\u6709\u574F"
+  overall: "end\u6444\u50CF\u5934\u6CA1\u6709\u574F"
   options: []
   isEnded: 1
   isReached: 0

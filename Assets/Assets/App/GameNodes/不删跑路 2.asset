@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e53f64f22a21524e98e767cb7e15049, type: 3}
-  m_Name: "end\u88AB\u8001\u677F\u8F9E\u9000"
+  m_Name: "\u4E0D\u5220\u8DD1\u8DEF 2"
   m_EditorClassIdentifier: 
-  angle: -90
-  connectionSize: {x: 1, y: 1}
-  clip: {fileID: 32900000, guid: 83b14968de3af7a4bbaec00e67be6854, type: 3}
-  description: "\u88AB\u8001\u677F\u8F9E\u9000"
-  options: []
-  isEnded: 1
+  angle: -135
+  connectionSize: {x: 2, y: 1}
+  clip: {fileID: 32900000, guid: 8bc65efb7d50254409febe3265c9296c, type: 3}
+  description: "\u4E0D\u5220\u8DD1\u8DEF"
+  overall: "\u4E0D\u5220\u8DD1\u8DEF"
+  options:
+  - buttonTittle: "end\u521D\u751F\u4E4B\u9633"
+    node: {fileID: 11400000, guid: acdf993b44d883043b9fed9e3d7431ac, type: 2}
+  isEnded: 0
   isReached: 0

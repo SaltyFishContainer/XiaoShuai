@@ -19,6 +19,7 @@ public class GameNode : ScriptableObject
     public Vector2 connectionSize = Vector2.one;
     public VideoClip clip;
     public string description;
+    public string overall;
     public GameOption[] options;
     public bool isEnded;
     public bool isReached;

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: "\u627E\u5E05"
   m_EditorClassIdentifier: 
   angle: -90
-  connectionSize: {x: 1, y: 1}
+  connectionSize: {x: 2, y: 1}
   clip: {fileID: 32900000, guid: 365f36a392ffdcb4ba51de853914721d, type: 3}
   description: "\u627E\u8001\u677F"
+  overall: "\u627E\u8001\u677F"
   options:
   - buttonTittle: "\u7EE7\u7EED"
     node: {fileID: 11400000, guid: 98d1e2542ae8eea4189c15a5e1cc7667, type: 2}

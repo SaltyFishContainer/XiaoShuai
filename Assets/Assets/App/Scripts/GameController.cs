@@ -6,6 +6,7 @@ using UnityEngine.Video;
 using Lingdar77.Expand;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class GameController : MonoBehaviour
     private Stack<GameNode> previousNodes = new Stack<GameNode>();
     private SliderController sliderController;
     private bool sliderPointerState;
+    [Header("Events")]
+    public UnityEvent onPlayingEnded;
+
+    public static string newStart = "00000000000000000000000000";
 
     private void InitPlayer()
     {
@@ -43,6 +48,7 @@ public class GameController : MonoBehaviour
             }
             previousNodes.Push(currentNode);
             currentNode.isReached = true;
+            onPlayingEnded?.Invoke();
             foreach (var option in currentNode.options)
             {
                 if (Instantiate(buttonPrefab, buttonsArea).TryGetComponent<Button>(out var button))
@@ -170,7 +176,6 @@ public class GameController : MonoBehaviour
         Debug.Log(progress);
         // return progress;
     }
-
     public void Load(string save)
     {
         Stack<GameNode> stack = new Stack<GameNode>();
@@ -193,6 +198,7 @@ public class GameController : MonoBehaviour
             ++index;
         }
         startNode = lastNode;
+        onPlayingEnded?.Invoke();
         // return lastNode;
     }
 }

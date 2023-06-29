@@ -10,6 +10,7 @@ public class ProgressTreeGraphController : MonoBehaviour
     [SerializeField] private Transform nodePrefab;
     [SerializeField] private Transform nodeLinkPrefab;
     [SerializeField] private Transform spawnRoot;
+    [SerializeField] private Vector2 nodeSize = new Vector2(100, 100);
 
     public Action onGraphRedraw;
 
@@ -17,9 +18,13 @@ public class ProgressTreeGraphController : MonoBehaviour
     private float xmin = float.MaxValue;
     private float ymax = float.MinValue;
     private float ymin = float.MaxValue;
+    private RectTransform container;
+    private Vector2 rootPos;
 
     private void Awake()
     {
+        container = spawnRoot.parent as RectTransform;
+        rootPos = spawnRoot.position;
         Redraw();
     }
 
@@ -43,6 +48,7 @@ public class ProgressTreeGraphController : MonoBehaviour
         if (current.TryGetComponent<ProgressTreeNodeComponent>(out var comp))
         {
             comp.node = node;
+            comp.Confirm();
         }
         foreach (var option in node.options)
         {
@@ -88,7 +94,7 @@ public class ProgressTreeGraphController : MonoBehaviour
     }
     public Vector2 GetGraphSize()
     {
-        var center = transform.Find(nodePrefab.name + "(Clone)").position;
-        return new Vector2(2 * Mathf.Max(xmax - center.x, center.x - xmin), 2 * Mathf.Max(ymax - center.y, center.y - ymin));
+        return new Vector2(xmax - xmin, ymax - ymin) + nodeSize;
     }
+
 }

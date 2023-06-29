@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e53f64f22a21524e98e767cb7e15049, type: 3}
-  m_Name: "\u75C5\u5371"
+  m_Name: "end\u80DC\u5229\u4E86\u503C\u5F97\u5417"
   m_EditorClassIdentifier: 
   angle: -90
   connectionSize: {x: 2, y: 1}
-  clip: {fileID: 32900000, guid: bd0bfe636803c9e4896280a01d206c34, type: 3}
-  description: "\u75C5\u5371"
-  overall: "\u75C5\u5371"
-  options:
-  - buttonTittle: "\u4E0D\u9500\u6BC1"
-    node: {fileID: 11400000, guid: b27bfd4a169436a4d9fb012dbafbd8d0, type: 2}
-  - buttonTittle: "\u9500\u6BC1"
-    node: {fileID: 11400000, guid: 1005d314aabae984f8c8dcafcc7ca9ab, type: 2}
-  isEnded: 0
+  clip: {fileID: 32900000, guid: 53cc4433968282349b702feb4c59de24, type: 3}
+  description: "\u80DC\u5229\u4E86\u503C\u5F97\u5417"
+  overall: "\u80DC\u5229\u4E86\u503C\u5F97\u5417"
+  options: []
+  isEnded: 1
   isReached: 0
