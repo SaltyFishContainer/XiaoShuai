@@ -24,15 +24,39 @@ public class GameController : MonoBehaviour
     [Header("Data")]
     public GameNode startNode;
     private GameNode currentNode;
-    private Action playingEnded = null;
     private Stack<GameNode> previousNodes = new Stack<GameNode>();
     private SliderController sliderController;
     private bool sliderPointerState;
     [Header("Events")]
     public UnityEvent onPlayingEnded;
-
     public static string newStart = "00000000000000000000000000";
 
+    private void PlayingEnded()
+    {
+        if (currentNode.isEnded)
+        {
+            Debug.Log("Ended: " + currentNode.description);
+            return;
+        }
+        previousNodes.Push(currentNode);
+        currentNode.isReached = true;
+        buttonsArea.DestroyAllChildren();
+        onPlayingEnded?.Invoke();
+        foreach (var option in currentNode.options)
+        {
+            if (Instantiate(buttonPrefab, buttonsArea).TryGetComponent<Button>(out var button))
+            {
+                button.onClick.AddListener(() =>
+                {
+                    currentNode = option.node;
+
+                    InitPlayer();
+                });
+                var text = button.GetComponentInChildren<TextMeshProUGUI>();
+                text.text = option.buttonTittle;
+            }
+        }
+    }
     private void InitPlayer()
     {
         player.clip = currentNode.clip;
@@ -40,32 +64,7 @@ public class GameController : MonoBehaviour
         buttonsArea.DestroyAllChildren();
 
         player.Play();
-        playingEnded = () =>
-        {
-            if (currentNode.isEnded)
-            {
-                Debug.Log("Ended: " + currentNode.description);
-                return;
-            }
-            previousNodes.Push(currentNode);
-            currentNode.isReached = true;
-            buttonsArea.DestroyAllChildren();
-            onPlayingEnded?.Invoke();
-            foreach (var option in currentNode.options)
-            {
-                if (Instantiate(buttonPrefab, buttonsArea).TryGetComponent<Button>(out var button))
-                {
-                    button.onClick.AddListener(() =>
-                    {
-                        currentNode = option.node;
 
-                        InitPlayer();
-                    });
-                    var text = button.GetComponentInChildren<TextMeshProUGUI>();
-                    text.text = option.buttonTittle;
-                }
-            }
-        };
     }
     private void Awake()
     {
@@ -76,7 +75,7 @@ public class GameController : MonoBehaviour
         }
         if (player != null)
         {
-            player.loopPointReached += _ => playingEnded?.Invoke();
+            player.loopPointReached += _ => PlayingEnded();
         }
         if (slider != null)
         {

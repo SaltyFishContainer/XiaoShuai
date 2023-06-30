@@ -40,31 +40,25 @@
     <Analyzer Include="C:\CodeField\Engine\2022.3.1f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\LingDar77\Examples\PassiveTree\NodeDescription.cs" />
      <Compile Include="Assets\LingDar77\Tools\Functional\Flow.cs" />
      <Compile Include="Assets\LingDar77\Tools\Functional\Expand.cs" />
      <Compile Include="Assets\LingDar77\Tools\EditorExpand\BuildScenesEditorPatch\Editor\BuildScenesEditorPatch.cs" />
      <Compile Include="Assets\LingDar77\Tools\EditorExpand\EditorPropertySetter\Attributes\EditorSetterAttribute.cs" />
      <Compile Include="Assets\LingDar77\Tools\EditorExpand\EditorPropertySetter\Editor\EditorSetterDrawer.cs" />
      <Compile Include="Assets\LingDar77\Tools\Functional\Reflection.cs" />
-     <Compile Include="Assets\LingDar77\Examples\PassiveTree\PassiveTreeManager.cs" />
      <Compile Include="Assets\LingDar77\Tools\EditorExpand\BuildScenesEditorPatch\GameScenes.cs" />
      <Compile Include="Assets\LingDar77\Tools\Functional\FileSystem.cs" />
      <Compile Include="Assets\LingDar77\Tools\Functional\Structures.cs" />
      <Compile Include="Assets\LingDar77\Tools\RuntimeExpand\ToggleHide\ToggleHide.cs" />
      <Compile Include="Assets\LingDar77\Tools\EditorExpand\AssetsBoundleExporter\Editor\AssetsBoundle.cs" />
      <Compile Include="Assets\LingDar77\Tools\RuntimeExpand\ObjectPool\ObjectPool.cs" />
-     <Compile Include="Assets\LingDar77\Examples\PassiveTree\PassiveTreeVisualNode.cs" />
      <Compile Include="Assets\LingDar77\Tools\EditorExpand\CustomCreateMenu\Editor\CustomCreateScriptItemsPatch.cs" />
-     <Compile Include="Assets\LingDar77\Examples\PassiveTree\PassiveTreeVisualNodeComponent.cs" />
-     <Compile Include="Assets\LingDar77\Examples\PassiveTree\PassvieTreeVisualNodeCollection.cs" />
      <Compile Include="Assets\LingDar77\Tools\EditorExpand\CustomAttributes\ShowAsFunctionAttribute.cs" />
      <Compile Include="Assets\LingDar77\Tools\RuntimeExpand\EventHandler\EventHandler.cs" />
      <Compile Include="Assets\LingDar77\Tools\EditorExpand\InspectableType\Editor\InspectableTypeDrawer.cs" />
      <Compile Include="Assets\LingDar77\Tools\EditorExpand\CameraSynchronizer\CameraSynchronizer.cs" />
      <Compile Include="Assets\LingDar77\Tools\EditorExpand\CameraSynchronizer\Editor\CameraSynchronizerDrawer.cs" />
      <Compile Include="Assets\LingDar77\Tools\EditorExpand\InspectableType\InspectableType.cs" />
-     <Compile Include="Assets\LingDar77\Examples\PassiveTree\PassiveTreeControler.cs" />
      <None Include="Assets\LingDar77\LingDar77.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\CodeField\Engine\2022.3.1f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -714,11 +708,11 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>C:\CodeField\Engine\2022.3.1f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InputSystem">
-        <HintPath>C:\CodeField\Working\XiaoShuai\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>C:\CodeField\Working\XiaoShuai\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+        <HintPath>C:\CodeField\Working\XiaoShuai\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
