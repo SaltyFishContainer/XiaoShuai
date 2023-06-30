@@ -2,99 +2,69 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Lingdar77.Singletons
+namespace Lingdar77
 {
-    public sealed class ObjectPool
+    public sealed class ObjectPool : MonoBehaviour
     {
-
-        private GameObject root;
-
-        public uint MaxCapacity = 100;
-        private Dictionary<string, HashSet<GameObject>> pools = new Dictionary<string, HashSet<GameObject>>();
-
-        private ObjectPool()
+        [HideInInspector] public static ObjectPool Instance;
+        private Dictionary<GameObject, Queue<GameObject>> map = new Dictionary<GameObject, Queue<GameObject>>();
+        private void Awake()
         {
-            root = new GameObject("Pool Root");
-        }
-        public static ObjectPool Instance { get { return Nested.instance; } }
-
-        private class Nested
-        {
-            // Explicit static constructor to tell C# compiler
-            // not to mark type as beforefieldinit
-            static Nested()
+            if (Instance == null)
             {
+                Instance = this;
             }
-
-            internal static readonly ObjectPool instance = new ObjectPool();
         }
 
-        public GameObject SpawnObject(GameObject orginal, Vector3 position, Quaternion rotation, Transform parent = null)
+        public GameObject GetObject(GameObject prototype)
         {
-            HashSet<GameObject> pool;
-            GameObject obj;
-            if (!pools.TryGetValue(orginal.name, out pool))
+            GameObject result = null;
+            if (!map.TryGetValue(prototype, out var queue) || queue.Count == 0)
             {
-                pool = new HashSet<GameObject>();
-                pools.Add(orginal.name, pool);
-                obj = Object.Instantiate(orginal, position, rotation, parent);
-                pool.Add(obj);
+                result = Instantiate(prototype, transform);
+                var comp = result.AddComponent<ObjectPoolChild>();
+                comp.pool = this;
+                comp.prototype = prototype;
             }
             else
             {
-                var i = pool.GetEnumerator();
-                if (i.MoveNext())
-                    obj = i.Current;
-                else
-                {
-                    obj = Object.Instantiate(orginal, position, rotation, parent);
-                    pool.Add(obj);
-                    return obj;
-                }
+                result = queue.Dequeue();
             }
-            if (obj)
-            {
-                pool.Remove(obj);
-                obj.transform.SetParent(parent);
-                obj.transform.position = position;
-                obj.transform.rotation = rotation;
-                obj.SetActive(true);
-                return obj;
-            }
-
-            // var obj = Object.Instantiate(orginal, position, rotation, parent);
-            // Debug.Log(orginal.GetType());
-            return null;
+            result.transform.SetParent(null);
+            result.SetActive(true);
+            return result;
         }
-        public void ReleaseObject(GameObject obj)
+
+        public void CacheObject(GameObject obj)
         {
-            HashSet<GameObject> pool;
-            var name = obj.name.Substring(0, obj.name.Length - 7);
-            if (pools.TryGetValue(name, out pool))
+            if (obj.TryGetComponent<ObjectPoolChild>(out var comp))
             {
-                pool.Add(obj);
-                if (pool.Count > MaxCapacity)
+                if (comp.pool != this)
                 {
-                    //try free objects when reach max capacity
-                    root.transform.DetachChildren();
-                    foreach (var i in pool)
-                    {
-                        Object.Destroy(i);
-                    }
-                    // Debug.Log("clear");
-                    pool.Clear();
+                    Object.Destroy(obj);
+                    return;
                 }
+                if (!map.TryGetValue(comp.prototype, out var queue))
+                {
+                    queue = new Queue<GameObject>();
+                    map.Add(comp.prototype, queue);
+                }
+                queue.Enqueue(obj);
+                obj.transform.SetParent(transform);
+                obj.SetActive(false);
             }
-            else
-            {
-                pool = new HashSet<GameObject>();
-                pools.Add(name, pool);
-                pool.Add(obj);
-            }
-            obj.SetActive(false);
-            obj.transform.SetParent(root.transform);
-            // Debug.Log(root.transform.childCount);
         }
 
+        public void ClearPool()
+        {
+            foreach (var pair in map)
+            {
+                foreach (var obj in pair.Value)
+                {
+                    GameObject.Destroy(obj);
+                }
+            }
+            map = new Dictionary<GameObject, Queue<GameObject>>();
+        }
     }
 }
