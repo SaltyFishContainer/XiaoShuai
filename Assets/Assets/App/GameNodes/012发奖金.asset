@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e53f64f22a21524e98e767cb7e15049, type: 3}
-  m_Name: "\u53D1\u5956\u91D1"
+  m_Name: "012\u53D1\u5956\u91D1"
   m_EditorClassIdentifier: 
-  angle: -90
-  connectionSize: {x: 2, y: 1}
+  angle: 0
+  connectionSize: {x: 3, y: 1}
   clip: {fileID: 32900000, guid: a923466b725757f4c99014f75a9e7089, type: 3}
   description: "\u53D1\u5956\u91D1"
   overall: "\u53D1\u5956\u91D1"
@@ -21,4 +21,4 @@ MonoBehaviour:
   - buttonTittle: "\u7EE7\u7EED"
     node: {fileID: 11400000, guid: 7200de66a2d6a3047a7b6409070ac031, type: 2}
   isEnded: 0
-  isReached: 0
+  isReached: 1
