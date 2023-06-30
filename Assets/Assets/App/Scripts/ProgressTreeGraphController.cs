@@ -63,6 +63,7 @@ public class ProgressTreeGraphController : MonoBehaviour
         {
             comp.node = node;
             comp.gameController = gameController;
+            comp.graphController = this;
             comp.Confirm();
         }
         foreach (var option in node.options)
