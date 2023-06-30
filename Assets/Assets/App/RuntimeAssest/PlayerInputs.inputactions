@@ -1,12 +1,12 @@
 {
-    "name": "New Controls",
+    "name": "PlayerInputs",
     "maps": [
         {
-            "name": "asd",
+            "name": "PlayerInputs",
             "id": "811538e4-a8e9-44ea-8d5c-b06b015c27d5",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "ToggleSaveLoadPage",
                     "type": "Button",
                     "id": "336b864c-4a17-4754-8198-0c2a848613e7",
                     "expectedControlType": "Button",
@@ -23,7 +23,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "ToggleSaveLoadPage",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

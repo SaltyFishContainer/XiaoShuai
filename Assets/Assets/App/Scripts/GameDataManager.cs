@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+[System.Serializable]
 public enum SaveName
 {
-    SAVE1,
-    SAVE2,
-    SAVE3,
-    NONE = 0
+    NONE = 0,
+    SAVE1 = 1,
+    SAVE2 = 2,
+    SAVE3 = 3
 }
 public class GameDataManager : MonoBehaviour
 {

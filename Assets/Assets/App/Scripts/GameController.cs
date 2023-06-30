@@ -117,7 +117,7 @@ public class GameController : MonoBehaviour
     }
     public void StartPlay()
     {
-       LoadData(newStart);
+        LoadData(newStart);
     }
     public void Skip()
     {
@@ -170,7 +170,7 @@ public class GameController : MonoBehaviour
             player.time = time;
         }
     }
-    private string SaveCurrentProgress()
+    public string SaveCurrentProgress()
     {
         Stack<GameNode> stack = new Stack<GameNode>();
         stack.Push(startNode);
@@ -179,9 +179,9 @@ public class GameController : MonoBehaviour
         {
             var current = stack.Pop();
             if (current.clip != player.clip)
-                progress += (current.isReached ? 1 : 0);
+                progress += (current.isReached ? '1' : '0');
             else
-                progress += 2;
+                progress += '2';
             foreach (var option in current.options)
             {
                 stack.Push(option.node);
@@ -190,7 +190,7 @@ public class GameController : MonoBehaviour
         Debug.Log(progress);
         return progress;
     }
-    private void LoadData(string save)
+    public GameNode LoadData(string save, bool load = true)
     {
         Stack<GameNode> stack = new Stack<GameNode>();
         stack.Push(startNode);
@@ -211,10 +211,13 @@ public class GameController : MonoBehaviour
             }
             ++index;
         }
-        currentNode = lastNode;
-        InitPlayer();
-        onPlayingEnded?.Invoke();
-
+        if (load)
+        {
+            currentNode = lastNode;
+            InitPlayer();
+            onPlayingEnded?.Invoke();
+        }
+        return lastNode;
     }
     public void Load()
     {

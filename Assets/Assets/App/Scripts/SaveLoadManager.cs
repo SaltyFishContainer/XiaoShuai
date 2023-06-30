@@ -1,18 +1,84 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.Events;
+
+[System.Serializable]
+public struct SaveSlot
+{
+    public SaveName name;
+    public TextMeshProUGUI textDescription;
+    public Button button;
+}
+
+[System.Serializable]
+public enum SLType
+{
+    Save,
+    Load
+}
 
 public class SaveLoadManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public struct OnPerformedEventParameter
     {
-        
+        public SaveName saveName;
+        public SLType type;
+
+        public OnPerformedEventParameter(SLType type, SaveName saveName) : this()
+        {
+            this.type = type;
+            this.saveName = saveName;
+        }
+    }
+    [SerializeField] private SaveSlot[] slots;
+    [SerializeField] private GameController gameController;
+    public UnityEvent<OnPerformedEventParameter> onPerformed;
+    public SLType type;
+    private GameDataManager dataManager;
+
+    private void Awake()
+    {
+        dataManager = gameController.GetComponent<GameDataManager>();
+        foreach (var slot in slots)
+        {
+            slot.button.onClick.AddListener(() =>
+            {
+                Perform(slot.name);
+
+            });
+            if (PlayerPrefs.HasKey(slot.name.ToString()))
+            {
+                var progress = dataManager.GetDocument(slot.name);
+                var node = gameController.LoadData(progress, false);
+                slot.textDescription.text = node.description;
+            }
+            else
+            {
+                slot.textDescription.text = "无记录";
+
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Perform(SaveName slot)
     {
-        
+        if (type == SLType.Save)
+        {
+            var progress = gameController.SaveCurrentProgress();
+            dataManager.SaveDocument(slot, progress);
+        }
+        else
+        {
+            if (!PlayerPrefs.HasKey(slot.ToString()))
+            {
+                return;
+            }
+            var progress = dataManager.GetDocument(slot);
+            gameController.LoadData(progress);
+        }
+        onPerformed?.Invoke(new OnPerformedEventParameter(type, slot));
     }
 }

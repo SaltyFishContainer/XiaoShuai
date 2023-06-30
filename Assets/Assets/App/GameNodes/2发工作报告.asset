@@ -21,4 +21,4 @@ MonoBehaviour:
   - buttonTittle: "\u7EE7\u7EED"
     node: {fileID: 11400000, guid: 168a9d3b37a193d46bbf03461990243e, type: 2}
   isEnded: 0
-  isReached: 1
+  isReached: 0
