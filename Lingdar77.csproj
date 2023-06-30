@@ -10,6 +10,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Lingdar77</RootNamespace>
     <ProjectGuid>{50DDB83D-9EFC-11BC-17A9-02DC2A24D06B}</ProjectGuid>
+    <RootNamespace>Lingdar77</RootNamespace>
+    <ProjectGuid>{50DDB83D-9EFC-11BC-17A9-02DC2A24D06B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Lingdar77</AssemblyName>
@@ -734,7 +736,7 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.1f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Serialization">
-        <HintPath>C:\CodeField\Engine\2022.3.1f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.1f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem">
       <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
