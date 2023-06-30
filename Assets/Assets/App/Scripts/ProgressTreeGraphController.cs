@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Lingdar77;
 using Lingdar77.Expand;
 using UnityEngine;
 
@@ -19,18 +20,31 @@ public class ProgressTreeGraphController : MonoBehaviour
     private float ymax = float.MinValue;
     private float ymin = float.MaxValue;
     private RectTransform container;
+    private ObjectPool pool;
     private Vector2 rootPos;
 
     private void Awake()
     {
         container = spawnRoot.parent as RectTransform;
+        pool = GetComponent<ObjectPool>();
         rootPos = spawnRoot.position;
         Redraw();
     }
 
     public void Redraw()
     {
-        spawnRoot.DestroyAllChildren();
+        spawnRoot.DestroyAllChildren(obj =>
+        {
+            var target = (obj as GameObject);
+            if (target.TryGetComponent<NodeLink>(out var link))
+            {
+                link.reset();
+            }
+            if (target.TryGetComponent<ObjectPoolChild>(out var child))
+                child.CacheObject2Pool();
+            else
+                Destroy(obj);
+        });
         DrawLine(startNode, spawnRoot);
         DrawNode(startNode, spawnRoot);
         onGraphRedraw?.Invoke();
@@ -43,7 +57,7 @@ public class ProgressTreeGraphController : MonoBehaviour
             return;
         }
         var radians = Mathf.PI * node.angle / 180;
-        var current = Instantiate(nodePrefab, parent);
+        var current = pool.GetObject(nodePrefab, parent);
         current.localPosition = new Vector3(Mathf.Cos(radians) * 200 * node.connectionSize.x, Mathf.Sin(radians) * 200 * node.connectionSize.x, 0);
         if (current.TryGetComponent<ProgressTreeNodeComponent>(out var comp))
         {
@@ -66,7 +80,7 @@ public class ProgressTreeGraphController : MonoBehaviour
         {
             return null;
         }
-        var current = Instantiate(nodeLinkPrefab, parent) as RectTransform;
+        var current = pool.GetObject(nodeLinkPrefab, parent) as RectTransform;
 
         if (parent != spawnRoot)
         {
@@ -76,11 +90,12 @@ public class ProgressTreeGraphController : MonoBehaviour
             current.localPosition = new Vector3(Mathf.Cos(parentRotation) * parentLength, Mathf.Sin(parentRotation) * parentLength);
             current.localEulerAngles = new Vector3(0, 0, node.angle - rect.eulerAngles.z);
             current.sizeDelta = new Vector2(current.sizeDelta.x * node.connectionSize.x, current.sizeDelta.y * node.connectionSize.y);
+            // current.localScale = new Vector3(node.connectionSize.x, node.connectionSize.y, 1);
         }
         else
         {
             var rect = current.GetComponent<RectTransform>();
-            rect.gameObject.DestroyAllChildren();
+            rect.DestroyAllChildren();
             rect.sizeDelta = Vector2.zero;
             rect.localEulerAngles = new Vector3(0, 0, node.angle);
 

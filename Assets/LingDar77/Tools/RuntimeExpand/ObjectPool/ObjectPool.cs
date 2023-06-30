@@ -35,6 +35,43 @@ namespace Lingdar77
             return result;
         }
 
+        public GameObject GetObject(GameObject prototype, Transform parent)
+        {
+            var result = GetObject(prototype);
+            result.transform.SetParent(parent);
+            result.transform.localScale = Vector3.one;
+            result.transform.SetLocalPositionAndRotation(Vector3.zero, new Quaternion());
+            return result;
+        }
+
+        public Transform GetObject(Transform prototype)
+        {
+            GameObject result = null;
+            if (!map.TryGetValue(prototype.gameObject, out var queue) || queue.Count == 0)
+            {
+                result = Instantiate(prototype, transform).gameObject;
+                var comp = result.AddComponent<ObjectPoolChild>();
+                comp.pool = this;
+                comp.prototype = prototype.gameObject;
+            }
+            else
+            {
+                result = queue.Dequeue();
+            }
+            result.transform.SetParent(null);
+            result.SetActive(true);
+            return result.transform;
+        }
+
+        public Transform GetObject(Transform prototype, Transform parent)
+        {
+            var result = GetObject(prototype);
+            result.SetParent(parent);
+            result.localScale = Vector3.one;
+            result.SetLocalPositionAndRotation(Vector3.zero, new Quaternion());
+            return result;
+        }
+
         public void CacheObject(GameObject obj)
         {
             if (obj.TryGetComponent<ObjectPoolChild>(out var comp))

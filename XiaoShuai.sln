@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lingdar77", "Lingdar77.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Editor", "Unity.2D.Sprite.Editor.csproj", "{4021ca24-0db9-3e3c-366d-6191ea36c49b}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{458ac8e7-9b9e-718c-f55f-4b572f4a7378}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.ShaderGraph.Utilities", "Unity.ShaderGraph.Utilities.csproj", "{201e55a1-458e-58b1-c4f4-1fa069215d06}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary", "Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj", "{1320aa6a-2e88-8079-9a4d-1646e7028024}"
@@ -66,6 +68,8 @@ Global
 		{3888f890-12a0-cf04-e881-35da7819eeb9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4021ca24-0db9-3e3c-366d-6191ea36c49b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4021ca24-0db9-3e3c-366d-6191ea36c49b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{458ac8e7-9b9e-718c-f55f-4b572f4a7378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{458ac8e7-9b9e-718c-f55f-4b572f4a7378}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{201e55a1-458e-58b1-c4f4-1fa069215d06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{201e55a1-458e-58b1-c4f4-1fa069215d06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1320aa6a-2e88-8079-9a4d-1646e7028024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

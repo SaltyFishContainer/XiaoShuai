@@ -7,6 +7,7 @@ using Lingdar77.Expand;
 using UnityEngine.UI;
 using System;
 using UnityEngine.Events;
+using Lingdar77;
 
 public class GameController : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class GameController : MonoBehaviour
 
     [Header("Data")]
     public GameNode startNode;
+    private ObjectPool pool;
     private GameNode currentNode;
     private Stack<GameNode> previousNodes = new Stack<GameNode>();
     private SliderController sliderController;
@@ -40,12 +42,18 @@ public class GameController : MonoBehaviour
         }
         previousNodes.Push(currentNode);
         currentNode.isReached = true;
-        buttonsArea.DestroyAllChildren();
+        buttonsArea.DestroyAllChildren(obj =>
+        {
+            var comp = (obj as GameObject).GetComponent<ObjectPoolChild>();
+            comp.CacheObject2Pool();
+        });
         onPlayingEnded?.Invoke();
         foreach (var option in currentNode.options)
         {
-            if (Instantiate(buttonPrefab, buttonsArea).TryGetComponent<Button>(out var button))
+            var obj = pool.GetObject(buttonPrefab, buttonsArea);
+            if (obj.TryGetComponent<Button>(out var button))
             {
+                button.onClick.RemoveAllListeners();
                 button.onClick.AddListener(() =>
                 {
                     currentNode = option.node;
@@ -61,13 +69,18 @@ public class GameController : MonoBehaviour
     {
         player.clip = currentNode.clip;
         text.text = currentNode.description;
-        buttonsArea.DestroyAllChildren();
+        buttonsArea.DestroyAllChildren(obj =>
+        {
+            var comp = (obj as GameObject).GetComponent<ObjectPoolChild>();
+            comp.CacheObject2Pool();
+        });
 
         player.Play();
 
     }
     private void Awake()
     {
+        pool = GetComponent<ObjectPool>();
         currentNode = startNode;
         if (skipBox != null)
         {
@@ -104,7 +117,7 @@ public class GameController : MonoBehaviour
     }
     public void StartPlay()
     {
-        InitPlayer();
+       LoadData(newStart);
     }
     public void Skip()
     {
@@ -200,6 +213,7 @@ public class GameController : MonoBehaviour
         }
         currentNode = lastNode;
         InitPlayer();
+        onPlayingEnded?.Invoke();
 
     }
     public void Load()
