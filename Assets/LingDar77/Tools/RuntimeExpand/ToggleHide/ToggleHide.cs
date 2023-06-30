@@ -1,25 +1,30 @@
 
-using UnityEngine.InputSystem;
 using UnityEngine;
+
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
 
 public class ToggleHide : MonoBehaviour
 {
-    [SerializeField] private InputActionReference key;
+#if ENABLE_INPUT_SYSTEM
+    [SerializeField] private InputActionReference actionRef;
+    private InputAction action;
+#else
+    [SerializeField] private KeyCode keyCode;
+#endif
     [SerializeField] private bool initialHide = true;
     [SerializeField] private bool displayOnTop = true;
-    private InputAction action;
 
+#if ENABLE_INPUT_SYSTEM
     private void PerformToggleHide(InputAction.CallbackContext _)
     {
-        if (!gameObject.activeSelf)
-        {
-            transform.SetAsLastSibling();
-        }
-        gameObject.SetActive(!gameObject.activeSelf);
+        PerformToggleHide();
     }
     private void Awake()
     {
-        action = key.ToInputAction();
+        if (actionRef == null) return;
+        action = actionRef.ToInputAction();
         if (!action.enabled)
         {
             action.Enable();
@@ -33,5 +38,23 @@ public class ToggleHide : MonoBehaviour
     private void OnDestroy()
     {
         action.performed -= PerformToggleHide;
+    }
+#else
+    private void Update()
+    {
+        if (keyCode != KeyCode.None)
+            if (Input.GetKey(keyCode))
+            {
+                PerformToggleHide();
+            }
+    }
+#endif
+    public void PerformToggleHide()
+    {
+        if (!gameObject.activeSelf)
+        {
+            transform.SetAsLastSibling();
+        }
+        gameObject.SetActive(!gameObject.activeSelf);
     }
 }
