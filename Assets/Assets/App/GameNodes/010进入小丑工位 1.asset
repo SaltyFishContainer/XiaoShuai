@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e53f64f22a21524e98e767cb7e15049, type: 3}
-  m_Name: "\u75C5\u5371"
+  m_Name: "010\u8FDB\u5165\u5C0F\u4E11\u5DE5\u4F4D 1"
   m_EditorClassIdentifier: 
-  angle: -90
-  connectionSize: {x: 2, y: 1}
-  clip: {fileID: 32900000, guid: bd0bfe636803c9e4896280a01d206c34, type: 3}
-  description: "\u75C5\u5371"
-  overall: "\u75C5\u5371"
+  angle: 0
+  connectionSize: {x: 3, y: 1}
+  clip: {fileID: 32900000, guid: 8d93eb6fe59855349a43c7a4ceab8900, type: 3}
+  description: "\u8FDB\u5165\u5C0F\u4E11\u5DE5\u4F4D"
+  overall: "\u8FDB\u5165\u5C0F\u4E11\u5DE5\u4F4D"
   options:
   - buttonTittle: "\u4E0D\u9500\u6BC1"
-    node: {fileID: 11400000, guid: b27bfd4a169436a4d9fb012dbafbd8d0, type: 2}
+    node: {fileID: 11400000, guid: 9d929d299fb65a94baaf3c4e24c989c5, type: 2}
   - buttonTittle: "\u9500\u6BC1"
-    node: {fileID: 11400000, guid: 1005d314aabae984f8c8dcafcc7ca9ab, type: 2}
+    node: {fileID: 11400000, guid: da83235b2cfbde74c8510ec3a31c7d8f, type: 2}
   isEnded: 0
-  isReached: 0
+  isReached: 1

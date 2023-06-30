@@ -78,6 +78,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Dark UI\Scripts\HoldKeyEvent.cs" />
+    <Compile Include="Assets\Assets\App\Scripts\SaveLoadManager.cs" />
     <Compile Include="Assets\Dark UI\Scripts\MainPanelManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Dark UI\Scripts\TimedEvent.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Assets\App\Scripts\GameController.cs" />
     <Compile Include="Assets\Assets\App\Scripts\GameDataManager.cs" />
     <Compile Include="Assets\Dark UI\Scripts\UIParticleRenderer.cs" />
+    <Compile Include="Assets\Assets\App\Scripts\NodeLink.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Dark UI\Scripts\ButtonAnimationFix.cs" />
