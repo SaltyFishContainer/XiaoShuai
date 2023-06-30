@@ -16,6 +16,7 @@ public class ToggleHide : MonoBehaviour
     [SerializeField] private bool initialHide = true;
     [SerializeField] private bool displayOnTop = true;
 
+
 #if ENABLE_INPUT_SYSTEM
     private void PerformToggleHide(InputAction.CallbackContext _)
     {
@@ -51,7 +52,7 @@ public class ToggleHide : MonoBehaviour
 #endif
     public void PerformToggleHide()
     {
-        if (!gameObject.activeSelf)
+        if (displayOnTop && !gameObject.activeSelf)
         {
             transform.SetAsLastSibling();
         }

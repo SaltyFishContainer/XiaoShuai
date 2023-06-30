@@ -67,6 +67,7 @@
      <Compile Include="Assets\Dark UI\Scripts\PanelTabButton.cs" />
      <Compile Include="Assets\Dark UI\Scripts\UIElementSound.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Assets\App\Scripts\MainMenuManager.cs" />
      <Compile Include="Assets\Dark UI\Scripts\PanelBrushManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
      <Compile Include="Assets\Dark UI\Scripts\MainPanelButton.cs" />
@@ -98,6 +99,7 @@
      <Compile Include="Assets\Dark UI\Scripts\SliderGamepadManager.cs" />
      <Compile Include="Assets\Assets\App\Scripts\ProgressTreeGraphController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+     <Compile Include="Assets\Assets\App\Scripts\ChallengeManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Dark UI\Scripts\SliderManager.cs" />
      <Compile Include="Assets\Dark UI\Scripts\PanelTabManager.cs" />
