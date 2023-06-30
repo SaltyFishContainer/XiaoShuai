@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 6103337638784601230}
   - component: {fileID: 8455194750867223383}
   - component: {fileID: 8805429419444994419}
-  - component: {fileID: 2487629131438126137}
+  - component: {fileID: 4201644309493880610}
   m_Layer: 5
   m_Name: Load Slot1
   m_TagString: Untagged
@@ -950,7 +950,7 @@ MonoBehaviour:
   notificationSound: {fileID: 0}
   enableHoverSound: 1
   enableClickSound: 1
---- !u!95 &2487629131438126137
+--- !u!95 &4201644309493880610
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
