@@ -19,9 +19,6 @@ public class GameController : MonoBehaviour
     [SerializeField] private SkipButton skipBox;
     [SerializeField] private GameDataManager dataManager;
 
-    [Header("Prefabs")]
-    [SerializeField] private GameObject buttonPrefab;
-
     [Header("Data")]
     public GameNode startNode;
     private ObjectPool pool;
@@ -50,7 +47,7 @@ public class GameController : MonoBehaviour
         onPlayingEnded?.Invoke();
         foreach (var option in currentNode.options)
         {
-            var obj = pool.GetObject(buttonPrefab, buttonsArea);
+            var obj = pool.GetObject(option.buttonPrefab, buttonsArea);
             if (obj.TryGetComponent<Button>(out var button))
             {
                 button.onClick.RemoveAllListeners();
@@ -61,7 +58,6 @@ public class GameController : MonoBehaviour
                     InitPlayer();
                 });
                 var text = button.GetComponentInChildren<TextMeshProUGUI>();
-                text.text = option.buttonTittle;
             }
         }
     }
