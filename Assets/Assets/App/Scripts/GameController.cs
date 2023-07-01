@@ -192,6 +192,10 @@ public class GameController : MonoBehaviour
     }
     public GameNode LoadData(string save, bool load = true)
     {
+        if (load)
+        {
+            Debug.Log(save);
+        }
         Stack<GameNode> stack = new Stack<GameNode>();
         stack.Push(startNode);
         int index = 0;
@@ -200,8 +204,9 @@ public class GameController : MonoBehaviour
         {
             var current = stack.Pop();
             char state = save[index];
-            current.isReached = state != '0';
-            if (state == '2')
+            if (load)
+                current.isReached = state != '0';
+            if (save[index] == '2')
             {
                 lastNode = current;
             }

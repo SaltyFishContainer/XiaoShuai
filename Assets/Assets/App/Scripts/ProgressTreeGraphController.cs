@@ -97,7 +97,7 @@ public class ProgressTreeGraphController : MonoBehaviour
         else
         {
             var rect = current.GetComponent<RectTransform>();
-            rect.DestroyAllChildren();
+            // rect.DestroyAllChildren();
             rect.sizeDelta = Vector2.zero;
             rect.localEulerAngles = new Vector3(0, 0, node.angle);
 
