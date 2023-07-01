@@ -705,6 +705,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1963667264332629811, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963667264332629811, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963667264332629811, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1535280055}
+    - target: {fileID: 1963667264332629811, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963667264332629811, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateSaves
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963667264332629811, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SaveLoadManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963667264332629811, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6000323092335327570, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
       propertyPath: m_Name
       value: LoadPage
@@ -834,6 +862,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee55c40f322c27942ab8e867a1b5d2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1535280055 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8112271231736950089, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
+  m_PrefabInstance: {fileID: 1365539105}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec3da72a93ad7645a765485dc91c015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1627769712 stripped
