@@ -42,6 +42,11 @@ public class SaveLoadManager : MonoBehaviour
     private void Awake()
     {
         dataManager = gameController.GetComponent<GameDataManager>();
+        UpdateSaves();
+    }
+
+    public void UpdateSaves()
+    {
         foreach (var slot in slots)
         {
             slot.button.onClick.AddListener(() =>

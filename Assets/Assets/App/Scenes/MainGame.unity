@@ -498,6 +498,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1963667264332629811, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963667264332629811, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963667264332629811, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 807850712}
+    - target: {fileID: 1963667264332629811, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963667264332629811, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateSaves
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963667264332629811, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SaveLoadManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963667264332629811, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6000323092335327570, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
       propertyPath: m_Name
       value: SavePage
@@ -603,6 +631,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
+--- !u!114 &807850712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8112271231736950089, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
+  m_PrefabInstance: {fileID: 807850711}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec3da72a93ad7645a765485dc91c015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &949092300 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2323018051178540488, guid: 2556e5f71c9255f48b64ba1b8584b64e, type: 3}
