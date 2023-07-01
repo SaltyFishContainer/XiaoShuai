@@ -238,7 +238,19 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3604488053208201717, guid: bd5314c0936857145b97411edca47bdc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3836173191318089603, guid: bd5314c0936857145b97411edca47bdc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631123619040623038, guid: bd5314c0936857145b97411edca47bdc, type: 3}
+      propertyPath: SpinSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672196636263703970, guid: bd5314c0936857145b97411edca47bdc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -754,6 +766,10 @@ PrefabInstance:
       propertyPath: onPerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2107557727}
+    - target: {fileID: 8112271231736950089, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
+      propertyPath: onPerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PerformHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

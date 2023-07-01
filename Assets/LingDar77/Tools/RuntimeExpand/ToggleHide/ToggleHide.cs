@@ -86,6 +86,30 @@ public class ToggleHide : MonoBehaviour
         gameObject.SetActive(!gameObject.activeSelf);
         onTogglePerformed?.Invoke(gameObject.activeSelf);
     }
+    public void PerformHide()
+    {
+        gameObject.SetActive(false);
+        onTogglePerformed?.Invoke(false);
+    }
+    public void PerformShow()
+    {
+        if (hideOthers)
+        {
+            foreach (var page in openedPages)
+            {
+                if (page != this)
+                    page.gameObject.SetActive(false);
+            }
+            openedPages.Clear();
+            openedPages.Add(this);
+        }
+        if (displayOnTop)
+        {
+            transform.SetAsLastSibling();
+        }
 
+        gameObject.SetActive(true);
+        onTogglePerformed?.Invoke(true);
 
+    }
 }
