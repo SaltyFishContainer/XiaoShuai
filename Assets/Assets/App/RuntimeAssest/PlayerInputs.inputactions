@@ -6,7 +6,7 @@
             "id": "811538e4-a8e9-44ea-8d5c-b06b015c27d5",
             "actions": [
                 {
-                    "name": "ToggleSaveLoadPage",
+                    "name": "ToggleSavePage",
                     "type": "Button",
                     "id": "336b864c-4a17-4754-8198-0c2a848613e7",
                     "expectedControlType": "Button",
@@ -22,17 +22,35 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleLoadPage",
+                    "type": "Button",
+                    "id": "2a7db4a5-ea44-4fab-9ae3-91edbb3687c0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TogglePause",
+                    "type": "Button",
+                    "id": "bc1850a4-7c33-4138-b162-5f2897c2e113",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "da2c2dea-7029-46c9-8887-41e4485380cd",
-                    "path": "<Keyboard>/h",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ToggleSaveLoadPage",
+                    "action": "ToggleSavePage",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -44,6 +62,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ToggleChallenagePage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b945e3fc-b445-4c8d-b687-f6a82fedc9ca",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleLoadPage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0922187c-3e87-4315-b4a3-89b5194c62fe",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TogglePause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameController gameController;
 
-    // Update is called once per frame
-    void Update()
+
+    public void PlayNewGame()
     {
-        
+        gameController.StartPlay();
+    }
+    public void ContinueLastGame()
+    {
+
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
