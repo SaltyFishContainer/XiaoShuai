@@ -28,13 +28,15 @@ public class ToggleHide : MonoBehaviour
     }
     private void Start()
     {
-        if (actionRef == null) return;
-        action = actionRef.ToInputAction();
-        if (!action.enabled)
+        if (actionRef != null)
         {
-            action.Enable();
+            action = actionRef.ToInputAction();
+            if (!action.enabled)
+            {
+                action.Enable();
+            }
+            action.performed += PerformToggleHide;
         }
-        action.performed += PerformToggleHide;
         if (initialHide)
         {
             gameObject.SetActive(false);
@@ -48,7 +50,6 @@ public class ToggleHide : MonoBehaviour
 #else
     private void Start()
     {
-        if (keyCode == KeyCode.None) return;
         if (initialHide)
         {
             gameObject.SetActive(false);

@@ -1324,18 +1324,18 @@ PrefabInstance:
     - target: {fileID: 675045651632244714, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8052747479511181164}
+      objectReference: {fileID: 0}
     - target: {fileID: 675045651632244714, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 675045651632244714, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Back
+      value: PerformToggleHide
       objectReference: {fileID: 0}
     - target: {fileID: 675045651632244714, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameController, Assembly-CSharp
+      value: ToggleHide, Lingdar77
       objectReference: {fileID: 0}
     - target: {fileID: 675045651632244714, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
