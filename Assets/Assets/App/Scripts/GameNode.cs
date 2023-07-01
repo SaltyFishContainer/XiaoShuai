@@ -7,7 +7,7 @@ using UnityEngine.Video;
 [System.Serializable]
 public struct GameOption
 {
-    public string buttonTittle;
+    public GameObject buttonPrefab;
     public GameNode node;
 }
 
