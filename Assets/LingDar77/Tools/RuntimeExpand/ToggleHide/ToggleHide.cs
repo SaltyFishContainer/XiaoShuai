@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using UnityEngine;
 
 #if ENABLE_INPUT_SYSTEM
@@ -15,14 +16,16 @@ public class ToggleHide : MonoBehaviour
 #endif
     [SerializeField] private bool initialHide = true;
     [SerializeField] private bool displayOnTop = true;
+    [SerializeField] private bool hideOthers = true;
 
+    private static List<ToggleHide> openedPages = new List<ToggleHide>();
 
 #if ENABLE_INPUT_SYSTEM
     private void PerformToggleHide(InputAction.CallbackContext _)
     {
         PerformToggleHide();
     }
-    private void Awake()
+    private void Start()
     {
         if (actionRef == null) return;
         action = actionRef.ToInputAction();
@@ -41,6 +44,14 @@ public class ToggleHide : MonoBehaviour
         action.performed -= PerformToggleHide;
     }
 #else
+    private void Start()
+    {
+        if (keyCode == KeyCode.None) return;
+        if (initialHide)
+        {
+            gameObject.SetActive(false);
+        }
+    }
     private void Update()
     {
         if (keyCode != KeyCode.None)
@@ -52,10 +63,26 @@ public class ToggleHide : MonoBehaviour
 #endif
     public void PerformToggleHide()
     {
-        if (displayOnTop && !gameObject.activeSelf)
+        if (!gameObject.activeSelf)
         {
-            transform.SetAsLastSibling();
+            if (hideOthers)
+            {
+                foreach (var page in openedPages)
+                {
+                    if (page != this)
+                        page.gameObject.SetActive(false);
+                }
+                openedPages.Clear();
+                openedPages.Add(this);
+            }
+            if (displayOnTop)
+            {
+                transform.SetAsLastSibling();
+            }
         }
+
         gameObject.SetActive(!gameObject.activeSelf);
     }
+
+
 }
