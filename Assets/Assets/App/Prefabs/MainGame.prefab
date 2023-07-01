@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 4313291468170511890}
   - component: {fileID: 4583743476534232281}
   - component: {fileID: 2751437742362075429}
+  - component: {fileID: 5631123619040623038}
   m_Layer: 5
   m_Name: ProgressBar
   m_TagString: Untagged
@@ -452,6 +453,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5631123619040623038}
+        m_TargetAssemblyTypeName: AnimationRotator, Assembly-CSharp
+        m_MethodName: OnSliderValueChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2751437742362075429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,6 +477,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27d95da102c92449a5d6bc7711f9f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5631123619040623038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4070982825709773484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ed5ff1deaa831468201a538c3cbc32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 3836173191318089603}
+  SpinSpeed: 10
 --- !u!1 &5397146664865667379
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +575,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5431893353091910110}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -875,7 +902,7 @@ MonoBehaviour:
   buttonsArea: {fileID: 479680714879697191}
   skipBox: {fileID: 6599286182049553831}
   dataManager: {fileID: 1355250739990589894}
-  buttonPrefab: {fileID: 8054509877726255778, guid: 1e4dadf8994649946b15b1972be471a5, type: 3}
+  startPageToggleHide: {fileID: 0}
   startNode: {fileID: 11400000, guid: d738dfde86e917045ab567d4275ec133, type: 2}
   onPlayingEnded:
     m_PersistentCalls:
