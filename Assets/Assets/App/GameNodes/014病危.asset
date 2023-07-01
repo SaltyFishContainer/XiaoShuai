@@ -18,9 +18,9 @@ MonoBehaviour:
   description: "\u75C5\u5371"
   overall: "\u75C5\u5371"
   options:
-  - buttonPrefab: {fileID: 8054509877726255778, guid: 1e4dadf8994649946b15b1972be471a5, type: 3}
+  - buttonPrefab: {fileID: 8054509877726255778, guid: 582fb3c471fff3345ad3abc66a570caf, type: 3}
     node: {fileID: 11400000, guid: b27bfd4a169436a4d9fb012dbafbd8d0, type: 2}
-  - buttonPrefab: {fileID: 8054509877726255778, guid: 1e4dadf8994649946b15b1972be471a5, type: 3}
+  - buttonPrefab: {fileID: 8054509877726255778, guid: 7a2005f6b689278469b9d171ddc9c536, type: 3}
     node: {fileID: 11400000, guid: 1005d314aabae984f8c8dcafcc7ca9ab, type: 2}
   isEnded: 0
   isReached: 1
