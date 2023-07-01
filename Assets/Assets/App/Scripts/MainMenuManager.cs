@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameController gameController;
+    [SerializeField] private GameObject messageBoxQuit;
+    [SerializeField] private Button confirmQuitButton;
+    [SerializeField] private Button cancelQuitButton;
 
-    // Update is called once per frame
-    void Update()
+
+    private void Awake()
     {
-        
+        confirmQuitButton.onClick.AddListener(() => { Application.Quit(); });
+        cancelQuitButton.onClick.AddListener(() => { messageBoxQuit.SetActive(false); });
+    }
+    public void PlayNewGame()
+    {
+        gameController.StartPlay();
+    }
+    public void ExitGame()
+    {
+        messageBoxQuit.SetActive(true);
     }
 }
