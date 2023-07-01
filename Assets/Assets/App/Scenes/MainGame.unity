@@ -1058,33 +1058,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1535280054}
     - target: {fileID: 4472180936264902860, guid: 1588413f58e641c488d87704da7a85aa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472180936264902860, guid: 1588413f58e641c488d87704da7a85aa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472180936264902860, guid: 1588413f58e641c488d87704da7a85aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1206501980}
-    - target: {fileID: 4472180936264902860, guid: 1588413f58e641c488d87704da7a85aa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472180936264902860, guid: 1588413f58e641c488d87704da7a85aa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PerformToggleHide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472180936264902860, guid: 1588413f58e641c488d87704da7a85aa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ToggleHide, Lingdar77
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472180936264902860, guid: 1588413f58e641c488d87704da7a85aa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+    - target: {fileID: 6360407815676161594, guid: 1588413f58e641c488d87704da7a85aa, type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1055294069}
     - target: {fileID: 6680228364196440024, guid: 1588413f58e641c488d87704da7a85aa, type: 3}
       propertyPath: m_Pivot.x
       value: 0
