@@ -15,8 +15,8 @@ MonoBehaviour:
   angle: 0
   connectionSize: {x: 3, y: 1}
   clip: {fileID: 32900000, guid: 83784850e9284d845a4bb01aa9803db2, type: 3}
-  description: "\u88AB\u8001\u677F\u8F9E\u9000"
-  overall: "\u88AB\u8001\u677F\u8F9E\u9000"
+  description: "\u79C1\u4EBA\u6444\u50CF\u5934\uFF1F\u79C1\u4EBA\u6444\u50CF\u5934\uFF01"
+  overall: "\u79C1\u4EBA\u6444\u50CF\u5934\uFF1F\u79C1\u4EBA\u6444\u50CF\u5934\uFF01"
   options: []
   isEnded: 1
   isReached: 0

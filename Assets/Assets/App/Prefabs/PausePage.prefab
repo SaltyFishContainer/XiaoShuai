@@ -35,7 +35,7 @@ RectTransform:
   m_Children:
   - {fileID: 2017450899614238405}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -231,6 +231,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4477579636082530590, guid: 180e8f7ec6e863e4ebed0a6c1d8d8fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777056349750979522, guid: 180e8f7ec6e863e4ebed0a6c1d8d8fb2, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b9b0c2f97a7fa44f8e18228429c6569, type: 2}
+    - target: {fileID: 5777056349750979522, guid: 180e8f7ec6e863e4ebed0a6c1d8d8fb2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6723107734422500351, guid: 7b9b0c2f97a7fa44f8e18228429c6569, type: 2}
+    - target: {fileID: 5777056349750979522, guid: 180e8f7ec6e863e4ebed0a6c1d8d8fb2, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351091775965087035, guid: 180e8f7ec6e863e4ebed0a6c1d8d8fb2, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 17306f8515dd20548875b9c3dd49bbdb, type: 2}
+    - target: {fileID: 8351091775965087035, guid: 180e8f7ec6e863e4ebed0a6c1d8d8fb2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6520668497843923372, guid: 17306f8515dd20548875b9c3dd49bbdb, type: 2}
+    - target: {fileID: 8351091775965087035, guid: 180e8f7ec6e863e4ebed0a6c1d8d8fb2, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9130097168595671893, guid: 180e8f7ec6e863e4ebed0a6c1d8d8fb2, type: 3}

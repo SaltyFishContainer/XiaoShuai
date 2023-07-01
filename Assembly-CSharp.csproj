@@ -42,6 +42,7 @@
   <ItemGroup>
      <Compile Include="Assets\Assets\App\Scripts\ProgressTreeNodeComponent.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\Assets\Scenes\Scripts\Settings.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\Dark UI\Scripts\SwitchManager.cs" />
      <Compile Include="Assets\Dark UI\Scripts\VirtualCursor.cs" />

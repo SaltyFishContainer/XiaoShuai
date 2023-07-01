@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2824885104301240342
 RectTransform:
   m_ObjectHideFlags: 0
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_text: Sounds like you have a lot of things need me to do .
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 17306f8515dd20548875b9c3dd49bbdb, type: 2}
-  m_sharedMaterial: {fileID: -5576166579435533487, guid: 17306f8515dd20548875b9c3dd49bbdb, type: 2}
+  m_sharedMaterial: {fileID: -6520668497843923372, guid: 17306f8515dd20548875b9c3dd49bbdb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 2ac9a8033337c4b908c54c087abd31e8, type: 2}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
