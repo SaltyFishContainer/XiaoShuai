@@ -236,4 +236,11 @@ public class GameController : MonoBehaviour
         InitPlayer();
         onPlayingEnded?.Invoke();
     }
+
+    public void ContinuePlay()
+    {
+        var lastSave = dataManager.GetDocument(dataManager.GetLastSaveName());
+        LoadData(lastSave);
+        
+    }
 }

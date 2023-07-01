@@ -35,7 +35,7 @@ RectTransform:
   m_Children:
   - {fileID: 6239664929320731238}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -117,9 +117,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee55c40f322c27942ab8e867a1b5d2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionRef: {fileID: -5996698634479156518, guid: 59db32b59cbcae349b2d69a46d336d8e, type: 3}
+  actionRef: {fileID: 1199447008034702896, guid: 59db32b59cbcae349b2d69a46d336d8e, type: 3}
   initialHide: 1
   displayOnTop: 1
+  hideOthers: 1
+  onTogglePerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8112271231736950089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +162,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  type: 0
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ToggleHide, Lingdar77
+        m_MethodName: PerformToggleHide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  type: 1
 --- !u!1001 &2029934380294016565
 PrefabInstance:
   m_ObjectHideFlags: 0

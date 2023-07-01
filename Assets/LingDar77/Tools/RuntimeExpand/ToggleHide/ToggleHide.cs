@@ -42,7 +42,8 @@ public class ToggleHide : MonoBehaviour
     }
     private void OnDestroy()
     {
-        action.performed -= PerformToggleHide;
+        if (actionRef != null)
+            action.performed -= PerformToggleHide;
     }
 #else
     private void Start()
