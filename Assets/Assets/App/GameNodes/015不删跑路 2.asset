@@ -21,4 +21,4 @@ MonoBehaviour:
   - buttonPrefab: {fileID: 8054509877726255778, guid: 1e4dadf8994649946b15b1972be471a5, type: 3}
     node: {fileID: 11400000, guid: acdf993b44d883043b9fed9e3d7431ac, type: 2}
   isEnded: 0
-  isReached: 1
+  isReached: 0

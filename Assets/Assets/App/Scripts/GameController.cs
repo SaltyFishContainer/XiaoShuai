@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Transform buttonsArea;
     [SerializeField] private SkipButton skipBox;
     [SerializeField] private GameDataManager dataManager;
+    [SerializeField] private ToggleHide startPageToggleHide;
 
     [Header("Data")]
     public GameNode startNode;
@@ -26,19 +27,22 @@ public class GameController : MonoBehaviour
     private Stack<GameNode> previousNodes = new Stack<GameNode>();
     private SliderController sliderController;
     private bool sliderPointerState;
+
     [Header("Events")]
     public UnityEvent onPlayingEnded;
     public static string newStart = "00000000000000000000000000";
 
     private void PlayingEnded()
     {
+
+        previousNodes.Push(currentNode);
+        currentNode.isReached = true;
         if (currentNode.isEnded)
         {
             Debug.Log("Ended: " + currentNode.description);
+            startPageToggleHide?.PerformToggleHide();
             return;
         }
-        previousNodes.Push(currentNode);
-        currentNode.isReached = true;
         buttonsArea.DestroyAllChildren(obj =>
         {
             var comp = (obj as GameObject).GetComponent<ObjectPoolChild>();
@@ -237,6 +241,6 @@ public class GameController : MonoBehaviour
     {
         var lastSave = dataManager.GetDocument(dataManager.GetLastSaveName());
         LoadData(lastSave);
-        
+
     }
 }

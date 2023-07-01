@@ -247,6 +247,10 @@ PrefabInstance:
       value: MainGame
       objectReference: {fileID: 0}
     - target: {fileID: 8052747479511181164, guid: bd5314c0936857145b97411edca47bdc, type: 3}
+      propertyPath: startPageToggleHide
+      value: 
+      objectReference: {fileID: 2107557727}
+    - target: {fileID: 8052747479511181164, guid: bd5314c0936857145b97411edca47bdc, type: 3}
       propertyPath: onPlayingEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 952498158}
@@ -574,6 +578,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7469381499446008361, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8112271231736950089, guid: afa29a8f3336cfe439e52226f5c64e7b, type: 3}
       propertyPath: gameController
       value: 
@@ -712,6 +720,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7469381499446008361, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8112271231736950089, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
       propertyPath: gameController
       value: 
@@ -725,6 +737,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
+--- !u!114 &1445460616 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8404452983752597906, guid: 2556e5f71c9255f48b64ba1b8584b64e, type: 3}
+  m_PrefabInstance: {fileID: 9176638390934172341}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12cc9843f342b3b4f86695b770c908a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1535280054 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1963667264332629811, guid: 92362908fe10e3843b5591d05ba8e0a0, type: 3}
@@ -1028,6 +1051,10 @@ PrefabInstance:
       propertyPath: actionRef
       value: 
       objectReference: {fileID: 2929166646103675381, guid: 59db32b59cbcae349b2d69a46d336d8e, type: 3}
+    - target: {fileID: 4269970079598671042, guid: ca0d5e5a099ed6a4d8eb0ac1f76d9532, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8556484007470454016, guid: ca0d5e5a099ed6a4d8eb0ac1f76d9532, type: 3}
       propertyPath: gameController
       value: 
@@ -1169,6 +1196,30 @@ PrefabInstance:
     - target: {fileID: 1928239390270023850, guid: 2556e5f71c9255f48b64ba1b8584b64e, type: 3}
       propertyPath: m_Name
       value: ChallengePage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656640452835173534, guid: 2556e5f71c9255f48b64ba1b8584b64e, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656640452835173534, guid: 2556e5f71c9255f48b64ba1b8584b64e, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1445460616}
+    - target: {fileID: 3656640452835173534, guid: 2556e5f71c9255f48b64ba1b8584b64e, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656640452835173534, guid: 2556e5f71c9255f48b64ba1b8584b64e, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Refresh
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656640452835173534, guid: 2556e5f71c9255f48b64ba1b8584b64e, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChallengeController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656640452835173534, guid: 2556e5f71c9255f48b64ba1b8584b64e, type: 3}
+      propertyPath: onTogglePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6417751100379021806, guid: 2556e5f71c9255f48b64ba1b8584b64e, type: 3}
       propertyPath: m_Pivot.x
