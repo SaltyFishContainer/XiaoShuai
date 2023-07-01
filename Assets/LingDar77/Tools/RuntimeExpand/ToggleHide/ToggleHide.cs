@@ -1,6 +1,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
@@ -17,8 +18,8 @@ public class ToggleHide : MonoBehaviour
     [SerializeField] private bool initialHide = true;
     [SerializeField] private bool displayOnTop = true;
     [SerializeField] private bool hideOthers = true;
-
-    private static List<ToggleHide> openedPages = new List<ToggleHide>();
+    public UnityEvent<bool> onTogglePerformed;
+    private static HashSet<ToggleHide> openedPages = new HashSet<ToggleHide>();
 
 #if ENABLE_INPUT_SYSTEM
     private void PerformToggleHide(InputAction.CallbackContext _)
@@ -82,6 +83,7 @@ public class ToggleHide : MonoBehaviour
         }
 
         gameObject.SetActive(!gameObject.activeSelf);
+        onTogglePerformed?.Invoke(gameObject.activeSelf);
     }
 
 

@@ -64,6 +64,7 @@
      <Compile Include="Assets\Dark UI\Scripts\MainPanelManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\Dark UI\Scripts\TimedEvent.cs" />
+     <Compile Include="Assets\Assets\App\Scripts\PausePageController.cs" />
      <Compile Include="Assets\Dark UI\Scripts\PanelTabButton.cs" />
      <Compile Include="Assets\Dark UI\Scripts\UIElementSound.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
