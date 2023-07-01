@@ -15,8 +15,8 @@ MonoBehaviour:
   angle: 0
   connectionSize: {x: 3, y: 1}
   clip: {fileID: 32900000, guid: 66514491f9f234e41a8d8db3d0791137, type: 3}
-  description: "\u53D1\u5DE5\u4F5C\u62A5\u544A"
-  overall: "\u53D1\u5DE5\u4F5C\u62A5\u544A"
+  description: "\u7ADE\u4E89\u5BF9\u624B\u53D7\u8001\u677F\u8D4F\u8BC6\uFF0C\u81EA\u5DF1\u65E0\u4EBA\u95EE\u6D25"
+  overall: "\u7ADE\u4E89\u5BF9\u624B\u53D7\u8001\u677F\u8D4F\u8BC6\uFF0C\u81EA\u5DF1\u65E0\u4EBA\u95EE\u6D25"
   options:
   - buttonPrefab: {fileID: 8054509877726255778, guid: 1e4dadf8994649946b15b1972be471a5, type: 3}
     node: {fileID: 11400000, guid: 168a9d3b37a193d46bbf03461990243e, type: 2}
