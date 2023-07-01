@@ -190,13 +190,10 @@ public class GameController : MonoBehaviour
         Debug.Log(progress);
         return progress;
     }
-    public GameNode LoadData(string save, bool load = true)
+    public void LoadData(string save)
     {
-        if (load)
-        {
-            Debug.Log(save);
-        }
-        Stack<GameNode> stack = new Stack<GameNode>();
+		Debug.Log(save);
+		Stack<GameNode> stack = new Stack<GameNode>();
         stack.Push(startNode);
         int index = 0;
         GameNode lastNode = startNode;
@@ -204,8 +201,7 @@ public class GameController : MonoBehaviour
         {
             var current = stack.Pop();
             char state = save[index];
-            if (load)
-                current.isReached = state != '0';
+            current.isReached = state != '0';
             if (save[index] == '2')
             {
                 lastNode = current;
@@ -213,16 +209,13 @@ public class GameController : MonoBehaviour
             foreach (var option in current.options)
             {
                 stack.Push(option.node);
+                
             }
             ++index;
         }
-        if (load)
-        {
-            currentNode = lastNode;
-            InitPlayer();
-            onPlayingEnded?.Invoke();
-        }
-        return lastNode;
+		currentNode = lastNode;
+		InitPlayer();
+		onPlayingEnded?.Invoke();
     }
     public void Load()
     {

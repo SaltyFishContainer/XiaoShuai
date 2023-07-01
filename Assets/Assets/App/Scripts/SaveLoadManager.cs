@@ -57,7 +57,7 @@ public class SaveLoadManager : MonoBehaviour
             if (PlayerPrefs.HasKey(slot.name.ToString()))
             {
                 var progress = dataManager.GetDocument(slot.name);
-                var node = gameController.LoadData(progress, false);
+                var node = GetCurrentPlayingNode(progress);
                 slot.textDescription.text = node.description;
             }
             else
@@ -85,5 +85,27 @@ public class SaveLoadManager : MonoBehaviour
             gameController.LoadData(progress);
         }
         onPerformed?.Invoke(new OnPerformedEventParameter(type, slot));
+    }
+
+    private GameNode GetCurrentPlayingNode(string save)
+    {
+        var stack = new Stack<GameNode>();
+        stack.Push(gameController.startNode);
+        int index = 0;
+        while(stack.Count != 0)
+        {
+            var current = stack.Pop();
+            var state = save[index];
+            if(state == '2')
+            {
+                 return current;
+            }
+            foreach(var option in current.options)
+            {
+                stack.Push(option.node);
+            }
+            ++index;
+        }
+        return gameController.startNode;
     }
 }
