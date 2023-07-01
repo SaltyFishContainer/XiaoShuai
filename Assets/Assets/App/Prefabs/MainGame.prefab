@@ -949,7 +949,7 @@ RectTransform:
   - {fileID: 7706194664815060270}
   - {fileID: 6633139678153446949}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1313,6 +1313,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game
       objectReference: {fileID: 0}
+    - target: {fileID: 432573482770121790, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 675045651632244714, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1503,7 +1507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5838671468318496173, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -158
       objectReference: {fileID: 0}
     - target: {fileID: 5838671468318496173, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_AnchoredPosition.y
