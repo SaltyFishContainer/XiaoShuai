@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 3836173191318089603}
-  SpinSpeed: 10
+  SpinSpeed: 5000
 --- !u!1 &5397146664865667379
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +814,7 @@ RectTransform:
   - {fileID: 7706194664815060270}
   - {fileID: 6633139678153446949}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1009,18 +1009,18 @@ PrefabInstance:
     - target: {fileID: 675045651632244714, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8052747479511181164}
+      objectReference: {fileID: 0}
     - target: {fileID: 675045651632244714, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 675045651632244714, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Back
+      value: PerformToggleHide
       objectReference: {fileID: 0}
     - target: {fileID: 675045651632244714, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameController, Assembly-CSharp
+      value: ToggleHide, Lingdar77
       objectReference: {fileID: 0}
     - target: {fileID: 675045651632244714, guid: c940f8c07500e7e4da99869d3c0b8dfd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1366,11 +1366,11 @@ PrefabInstance:
     - target: {fileID: 4523426875239840772, guid: 04a7d0261173b8d4db52ac5207757936, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: e42fac1ee412b604baab6e886f0546f2, type: 2}
+      objectReference: {fileID: 11400000, guid: 17306f8515dd20548875b9c3dd49bbdb, type: 2}
     - target: {fileID: 4523426875239840772, guid: 04a7d0261173b8d4db52ac5207757936, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -426878040409508661, guid: e42fac1ee412b604baab6e886f0546f2, type: 2}
+      objectReference: {fileID: -6520668497843923372, guid: 17306f8515dd20548875b9c3dd49bbdb, type: 2}
     - target: {fileID: 4523426875239840772, guid: 04a7d0261173b8d4db52ac5207757936, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
