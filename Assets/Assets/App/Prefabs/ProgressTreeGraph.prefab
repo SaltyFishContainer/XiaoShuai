@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 1988763069965847093}
   - component: {fileID: 8556484007470454016}
   - component: {fileID: 7315695448923465340}
+  - component: {fileID: 4154984267512752332}
   m_Layer: 5
   m_Name: ProgressTreeGraph
   m_TagString: Untagged
@@ -385,7 +386,7 @@ RectTransform:
   - {fileID: 4269970079598671042}
   - {fileID: 397209060065383897}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -472,6 +473,7 @@ MonoBehaviour:
   nodeLinkPrefab: {fileID: 5881531761654786478, guid: 66798ebab27a04942a8155c7eb8d1e5b, type: 3}
   spawnRoot: {fileID: 8804906592605851610}
   nodeSize: {x: 420, y: 150}
+  gameController: {fileID: 0}
 --- !u!114 &7315695448923465340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +486,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee6dcc6f762eb04aa87f430904af03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4154984267512752332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3595607788874889626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee55c40f322c27942ab8e867a1b5d2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionRef: {fileID: -8127255910007600686, guid: 59db32b59cbcae349b2d69a46d336d8e, type: 3}
+  initialHide: 1
+  displayOnTop: 1
 --- !u!1 &5674302067563439482
 GameObject:
   m_ObjectHideFlags: 0

@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   node: {fileID: 0}
+  gameController: {fileID: 0}
   text: {fileID: 1908012088550009905}
 --- !u!114 &5661070821425794547
 MonoBehaviour:
@@ -137,7 +138,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2820775961278557013}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1654320522611754321}
+        m_TargetAssemblyTypeName: ProgressTreeNodeComponent, Assembly-CSharp
+        m_MethodName: Skip2CurrentNode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4287738574927544830
 GameObject:
   m_ObjectHideFlags: 0

@@ -230,4 +230,10 @@ public class GameController : MonoBehaviour
         dataManager.SaveDocument(SaveName.SAVE1, progress);
         Debug.Log(progress);
     }
+    public void PlayAt(GameNode node)
+    {
+        currentNode = node;
+        InitPlayer();
+        onPlayingEnded?.Invoke();
+    }
 }

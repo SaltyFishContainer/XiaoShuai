@@ -12,7 +12,7 @@ public class ProgressTreeGraphController : MonoBehaviour
     [SerializeField] private Transform nodeLinkPrefab;
     [SerializeField] private Transform spawnRoot;
     [SerializeField] private Vector2 nodeSize = new Vector2(100, 100);
-
+    [SerializeField] private GameController gameController;
     public Action onGraphRedraw;
 
     private float xmax = float.MinValue;
@@ -62,6 +62,8 @@ public class ProgressTreeGraphController : MonoBehaviour
         if (current.TryGetComponent<ProgressTreeNodeComponent>(out var comp))
         {
             comp.node = node;
+            comp.gameController = gameController;
+            comp.graphController = this;
             comp.Confirm();
         }
         foreach (var option in node.options)
