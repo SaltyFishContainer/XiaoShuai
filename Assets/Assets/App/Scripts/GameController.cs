@@ -178,7 +178,7 @@ public class GameController : MonoBehaviour
         while (stack.Count != 0)
         {
             var current = stack.Pop();
-            if (current.clip != player.clip)
+            if (current != currentNode)
                 progress += (current.isReached ? '1' : '0');
             else
                 progress += '2';

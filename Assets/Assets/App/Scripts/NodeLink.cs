@@ -15,6 +15,7 @@ public class NodeLink : MonoBehaviour
 
     public void reset()
     {
-        trans.sizeDelta = size;
+        if (trans)
+            trans.sizeDelta = size;
     }
 }
