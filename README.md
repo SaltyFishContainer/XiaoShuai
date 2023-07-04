@@ -19,7 +19,7 @@
   暂无
 ## 开源协议
   MIT
-## 联系方式
-  暂无
+## 视频参考
+  【Unity交互视频成果分享】 https://www.bilibili.com/video/BV1SM4y177Kn/?share_source=copy_web&vd_source=92b6692f9bd72e246df044ee0fb96f9c
   
 *仅供参考*
